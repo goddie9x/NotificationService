@@ -1,0 +1,19 @@
+spring:
+  cloud:
+    function:
+      definition: consumerBinding
+    stream:
+      bindings:
+        consumerBinding-in-0: 
+          destination: god
+management:
+  health:
+    circuitbreakers:
+      enabled: true
+  endpoints:
+    web:
+      exposure:
+        include: health
+  endpoint:
+    health:
+      show-details: always
